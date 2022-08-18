@@ -47,17 +47,7 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent)
 	void Batfly(AActor* hitObject);
 
-	//// Begin HUD variables
-	///** The visibility state of the interaction textbox hud element*/
-	//UPROPERTY(Category = Hud, BlueprintReadOnly)
-	//ESlateVisibility InteractionTextboxVisibilityHud;
 
-	///** The text of the interaction textbox hud element*/
-	//UPROPERTY(Category = Hud, BlueprintReadOnly)
-	//FString InteractionTextboxTextHud;
-	//// End HUD variables
-
-	//UInteractableBase* CurrentInteractable;
 private:
 
 	///** Interaction reach */

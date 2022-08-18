@@ -56,11 +56,6 @@ void UInteractiveDoubleDoorComponent::TestButton()
 		USceneComponent* extraComp = CreateDefaultSubobject<USceneComponent>(TEXT("ExtraComp"));
 		extraComp->SetHiddenInGame(false, true);
 		ownerActor->SetRootComponent(extraComp);
-		//UActorComponent* comp = ownerActor->AddComponent(FName("StaticMeshComponent"), true, FTransform::Identity, nullptr);
-		//if (comp == nullptr)
-		//{
-		//	UE_LOG(LogTemp, Log, TEXT("No Sigar"))
-		//}
 	}
 }
 

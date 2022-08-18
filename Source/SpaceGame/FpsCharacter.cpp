@@ -108,24 +108,6 @@ void AFpsCharacter::SwapPawn()
 void AFpsCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
-
-	//if (NewController != nullptr && NewController->InputComponent != nullptr)
-	//{
-	//	UE_LOG(LogTemp, Log, TEXT("I am possessed!"))
-	//	UE_LOG(LogTemp, Log, TEXT("%d"), NewController->InputComponent->GetNumActionBindings())
-
-	//	//TArray<InputBindingComponentInterface*> Comps;
-	//	//GetComponents(Comps);
-	//	TArray<UActorComponent*> Comps = GetComponentsByInterface(UInputBindingComponentInterface::StaticClass());
-	//	for (int i = 0; i < Comps.Num(); i++)
-	//	{
-	//		UE_LOG(LogTemp, Log, TEXT("Comps..."))
-	//		//UObject* comp = Comps[i];
-	//		IInputBindingComponentInterface::Execute_SetupInputBindings(Comps[i], NewController);
-	//		//Comps[i]->SetupInputBindings(NewController);
-	//	}
-	//}
-
 }
 
 void AFpsCharacter::UnPossessed()
@@ -133,58 +115,3 @@ void AFpsCharacter::UnPossessed()
 	Super::UnPossessed();
 	UE_LOG(LogTemp, Log, TEXT("UnPossessed FpsCharacter"))
 }
-
-
-//void AFpsCharacter::InteractWithInteractable()
-//{
-//	UE_LOG(LogTemp, Log, TEXT("Instigateing 1"));
-//	if (CurrentInteractable != nullptr)
-//	{
-//		UE_LOG(LogTemp, Log, TEXT("Instigateing 2"));
-//		CurrentInteractable->OnInteract();
-//		InteractionTextboxTextHud = CurrentInteractable->GetDescription(); // I case interacting with it, has caused it to change description
-//	}
-//}
-
-//void AFpsCharacter::CheckForInteractable()
-//{
-//	struct FHitResult OutHit;
-//	FVector Start = FirstPersonCameraComponent->GetComponentLocation();
-//	FVector End = Start + FirstPersonCameraComponent->GetForwardVector() * InteractionReach;
-//
-//	bool FoundInteractable = false;
-//
-//	//UE_LOG(LogTemp, Log, TEXT("Hello"));
-//	//DrawDebugLine(GetWorld(), Start, End, FColor::Blue);
-//	if (GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECollisionChannel::ECC_Visibility))
-//	{
-//		//UE_LOG(LogTemp, Log, TEXT("Checking for insanity"));
-//		//Batfly(1, "You looking at me");
-//		//Batfly(OutHit.GetActor());
-//		//OutHit.GetActor()->GetComponentByClass(TSubclassOf<UActorComponent>::TSubclassOf());
-//		TArray<UInteractableBase*> Comps;
-//		OutHit.GetActor()->GetComponents(Comps);
-//		if (Comps.Num() > 0)
-//		{
-//			UInteractableBase* Interactable = Comps[0];
-//			FoundInteractable = true;
-//			//UE_LOG(LogTemp, Log, TEXT("Looking at: %s"), *Interactable->GetDescription());
-//			if (Interactable != CurrentInteractable)
-//			{
-//				CurrentInteractable = Interactable;
-//				InteractionTextboxTextHud = Interactable->GetDescription();
-//				InteractionTextboxVisibilityHud = ESlateVisibility::Visible;
-//			}
-//		}
-//		//FString s = OutHit.;
-//		//OutHit.
-//		//UE_LOG(LogTemp, Log, TEXT("Hit: %s"), *s);
-//	/*	UObject* Interactable = OutHit.GetActor();
-//		IInteractableInterface::Execute_OnInteract(Interactable);*/
-//	}
-//	if (!FoundInteractable && CurrentInteractable != nullptr)
-//	{
-//		CurrentInteractable = nullptr;
-//		InteractionTextboxVisibilityHud = ESlateVisibility::Hidden;
-//	}
-//}

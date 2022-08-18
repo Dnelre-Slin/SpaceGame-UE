@@ -25,23 +25,6 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 	
-	//UPROPERTY(EditAnywhere, Category = Test)
-	//bool activateTest;
-
-	//bool lastActive;
-
-	//UMovieSceneSequencePlayer* ReactionPlayer;
-
-	//bool AlteredState;
-
-	//UPROPERTY(EditAnywhere, Category = Interact)
-	//FString StageOne;
-
-	//UPROPERTY(EditAnywhere, Category = Interact)
-	//FString StageTwo;
-
-	//UPROPERTY(EditAnywhere, Category = Sequence)
-	//UActorSequenceComponent* Sequence;
 
 public:	
 	// Called every frame

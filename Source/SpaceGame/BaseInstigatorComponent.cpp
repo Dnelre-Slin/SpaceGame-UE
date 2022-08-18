@@ -33,11 +33,7 @@ void UBaseInstigatorComponent::SetupInputBindings_Implementation(UInputComponent
 	//if (NewController != nullptr && NewController->InputComponent != nullptr)
 	//if (OwnerCharacter != nullptr && OwnerCharacter->IsPlayerControlled() && OwnerCharacter->InputComponent != nullptr)
 	{
-		UE_LOG(LogTemp, Log, TEXT("Ofcourse mams!"))
-			//NewController->InputComponent->GetActionBinding()
-			PlayerInputComponent->BindAction(InteractInputName, IE_Pressed, this, &UBaseInstigatorComponent::InteractWithInteractable);
-		//NewController->InputComponent->BindAction(InteractInputName, IE_Pressed, this, &UBaseInstigatorComponent::InteractWithInteractable);
-		//OwnerCharacter->InputComponent->BindAction(InteractInputName, IE_Pressed, this, &UBaseInstigatorComponent::InteractWithInteractable);
+		PlayerInputComponent->BindAction(InteractInputName, IE_Pressed, this, &UBaseInstigatorComponent::InteractWithInteractable);
 	}
 }
 
@@ -56,12 +52,6 @@ void UBaseInstigatorComponent::InteractWithInteractable()
 void UBaseInstigatorComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
-	//ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner());
-	//if (OwnerCharacter != nullptr && OwnerCharacter->IsPlayerControlled())
-	//{
-	//	OwnerCharacter->InputComponent->BindAction(InteractInputName, IE_Pressed, this, &UBaseInstigatorComponent::InteractWithInteractable);
-	//}
 
 	TArray<UCameraComponent*> CameraComps;
 	GetOwner()->GetComponents(CameraComps);
